@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "compatibilitylib",
+  "name": "Compatibility Lib",
+  "authors": ["DArkHekRoMaNT"],
+  "version": "1.0.0",
+  "dependencies": {
+    "game": "1.13.0"
+  },
+  "website": "https://github.com/darkhekromant/CompatibilityLib"
+}

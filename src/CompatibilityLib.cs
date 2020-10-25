@@ -21,17 +21,10 @@ namespace CompatibilityLib
             base.Start(api);
             foreach (var mod in api.ModLoader.Mods)
             {
-                foreach (var asset in api.Assets.GetMany("compatibility/" + mod.Info.ModID))
+                string prefix = "compatibility/" + mod.Info.ModID;
+                foreach (var asset in api.Assets.GetMany(prefix))
                 {
-                    // Remove "compatibility/<modid>/"
-                    string[] path = asset.Location.Path.Split(new[] { '/', '\\' });
-                    string newpath = path[2];
-                    for (int i = 3; i < path.Length; i++)
-                    {
-                        newpath += "/" + path[i];
-                    }
-
-                    asset.Location.Path = newpath;
+                    asset.Location.Path = asset.Location.Path.Remove(0, prefix.Length + 1);
                 }
             }
         }

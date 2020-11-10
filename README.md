@@ -22,4 +22,4 @@ I have a More Variants mod (modid - morevariants), I want to add a patch to supp
             - copperchest.json
             - copperlabeledchest.json
 
-P.S. If assets/<yourmodid>/<vanilla-path> and assets/<yourmodid>/compatibility/<othermodid>/<vanilla-path> exists then if <othermodid> is loaded, the first asset will be replaced.
+P.S. If `assets/<yourmodid>/<vanilla-path>` and `assets/<yourmodid>/compatibility/<othermodid>/<vanilla-path>` exists then if `<othermodid>` is loaded, the first asset will be replaced.

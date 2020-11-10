@@ -27,7 +27,7 @@ namespace CompatibilityLib
                     AssetLocation newLoc = asset.Location;
                     newLoc.Path = asset.Location.Path.Remove(0, prefix.Length + 1); //remove "<prefix>/"
 
-                    //Remove exists assets (if exists)
+                    //Remove existing assets (if exists)
                     if (api.Assets.AllAssets.ContainsKey(newLoc)) api.Assets.AllAssets.Remove(newLoc);
 
                     asset.Location.Path = newLoc.Path;

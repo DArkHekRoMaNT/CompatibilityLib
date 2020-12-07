@@ -1,11 +1,5 @@
 using Vintagestory.API.Common;
 
-[assembly: ModInfo("CompatibilityLib", "compatibilitylib",
-    Authors = new[] { "DArkHekRoMaNT" },
-    Version = "1.0.0",
-    Website = "https://github.com/darkhekromant/CompatibilityLib")]
-[assembly: ModDependency("game", "1.13.0")]
-
 namespace CompatibilityLib
 {
     public class CompatibilityLib : ModSystem

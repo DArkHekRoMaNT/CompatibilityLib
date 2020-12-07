@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
+    <VSVersion>1.14.0</VSVersion>
   </PropertyGroup>
   
   <ItemGroup>
     <Reference Include="VintagestoryAPI">
-      <HintPath>$(VINTAGE_STORY)/1.14.0-rc.4/VintagestoryAPI.dll</HintPath>
+      <HintPath>$(VINTAGE_STORY)/$(VSVersion)/VintagestoryAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
 

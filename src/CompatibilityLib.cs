@@ -4,7 +4,7 @@ namespace CompatibilityLib
 {
     public class CompatibilityLib : ModSystem
     {
-        public static AssetCategory compatibility = new AssetCategory("compatibility", false, EnumAppSide.Universal);
+        public static AssetCategory compatibility = new AssetCategory("compatibility", true, EnumAppSide.Universal);
         public override double ExecuteOrder()
         {
             return 0.04; //load before json patching

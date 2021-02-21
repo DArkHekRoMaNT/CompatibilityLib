@@ -30,10 +30,10 @@ P.S. If `assets/<yourmodid>/<vanilla-path>` and `assets/<yourmodid>/compatibilit
 ### Advanced (v1.2.0+)
 You can use dependsOn[] in json-patch for create mod-dependent patch. For example:
 
-- dependsOn[{"modid": "morerecipes"}] - loaded if enabled morerecipes mod
-- dependsOn[{"modid": "morerecipes", "invert": true}] - loaded if disabled morerecipes mod
-- dependsOn[{"modid": "morerecipes"}, {"modid": "captureanimals"}] - loaded if enabled morerecipes AND captureanimals mods
-- dependsOn[{"modid": "morerecipes"}, {"modid": "captureanimals", "invert": true}] - loaded if enabled morerecipes AND  disabled captureanimals
+- `dependsOn[{"modid": "morerecipes"}]` - loaded if enabled morerecipes mod
+- `dependsOn[{"modid": "morerecipes", "invert": true}]` - loaded if disabled morerecipes mod
+- `dependsOn[{"modid": "morerecipes"}, {"modid": "captureanimals"}]` - loaded if enabled morerecipes AND captureanimals mods
+- `dependsOn[{"modid": "morerecipes"}, {"modid": "captureanimals", "invert": true}]` - loaded if enabled morerecipes AND  disabled captureanimals
 
 Full patch example:
 ```json

@@ -98,7 +98,7 @@ namespace CompatibilityLib
 
         public static bool skipAsset(Dependence[] dependsOn)
         {
-            if (dependsOn == null) return true;
+            if (dependsOn == null) return false;
 
             bool flag = true;
 
@@ -108,7 +108,7 @@ namespace CompatibilityLib
                 flag = flag && (loaded & !dependence.invert);
             }
 
-            return flag;
+            return !flag;
         }
     }
 

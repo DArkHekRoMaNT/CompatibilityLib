@@ -1,5 +1,6 @@
 using Vintagestory.API.Common;
 using HarmonyLib;
+using System.IO;
 
 namespace CompatibilityLib
 {

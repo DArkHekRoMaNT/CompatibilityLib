@@ -35,16 +35,16 @@ You can use dependsOn[] in json-patch for create mod-dependent patch. For exampl
 - `dependsOn[{"modid": "morerecipes"}, {"modid": "captureanimals"}]` - loaded if enabled morerecipes AND captureanimals mods
 - `dependsOn[{"modid": "morerecipes"}, {"modid": "captureanimals", "invert": true}]` - loaded if enabled morerecipes AND  disabled captureanimals
 
-Warning! Unlike the easy way, if you use mod-dependent patches, it is advisable to add compatibilitylib in the mod dependencies, otherwise all patches will be loaded without the library installed.
+**Warning!** Unlike the easy way, if you use mod-dependent patches, it is advisable to add compatibilitylib in the mod dependencies, otherwise all patches will be loaded without the library installed.
 
 How to add to modinfo.json:
-```json
+```
 {
   "modid": "bestmod",
   <...>
   "dependencies": {
-    "game": "1.13.4", <- minimal game version for your mod
-    "compatibilitylib": "1.2.0" <- minimal CL version
+    "game": "1.13.4", <-- minimal game version for your mod
+    "compatibilitylib": "1.2.0" <-- minimal CL version
   }
 }
 ```

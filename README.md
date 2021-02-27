@@ -53,7 +53,7 @@ Full patch example:
 ```json
 [
   {
-    "_comment": "If you add enable: false to your recipe, you can simply enable it when the desired mod is loaded",
+    "_comment": "If you add enabled: false to your recipe, you can simply enable it when the desired mod is loaded",
     "file": "recipes/grid/best-other-fish-recipe.json",
     "op": "replace",
     "path": "/enabled",

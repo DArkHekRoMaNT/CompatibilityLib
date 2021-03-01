@@ -27,7 +27,7 @@ I have a More Variants mod (modid - morevariants), I want to add a patch to supp
 
 P.S. If `assets/<yourmodid>/<vanilla-path>` and `assets/<yourmodid>/compatibility/<othermodid>/<vanilla-path>` exists then if `<othermodid>` is loaded, the first asset will be replaced.
 
-### Advanced (v1.2.0+)
+### Advanced (v1.2+)
 You can use dependsOn[] in json-patch for create mod-dependent patch. For example:
 
 - `dependsOn[{"modid": "morerecipes"}]` - loaded if enabled morerecipes mod
@@ -53,7 +53,7 @@ Full patch example:
 ```json
 [
   {
-    "_comment": "If you add enable: false to your recipe, you can simply enable it when the desired mod is loaded",
+    "_comment": "If you add enabled: false to your recipe, you can simply enable it when the desired mod is loaded",
     "file": "recipes/grid/best-other-fish-recipe.json",
     "op": "replace",
     "path": "/enabled",

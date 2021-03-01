@@ -17,7 +17,7 @@ namespace CompatibilityLib
         {
             MethodInfo m_ToObject = AccessTools.Method(typeof(IAsset), nameof(IAsset.ToObject), null, new Type[] { typeof(JsonPatch[]) });
             MethodInfo m_ToObject_Ext = AccessTools.Method(typeof(IAsset), nameof(IAsset.ToObject), null, new Type[] { typeof(JsonPatchExt[]) });
-            MethodInfo m_skipAsset = AccessTools.Method(typeof(ModJsonPatchLoaderPatch), nameof(skipAsset), new Type[] { typeof(Dependence[]) });
+            MethodInfo m_skipAsset = AccessTools.Method(typeof(ModJsonPatchLoaderPatch), nameof(SkipAsset), new Type[] { typeof(Dependence[]) });
 
             FieldInfo f_dependsOn = AccessTools.Field(typeof(JsonPatchExt), nameof(JsonPatchExt.dependsOn));
 
@@ -96,7 +96,7 @@ namespace CompatibilityLib
             }
         }
 
-        public static bool skipAsset(Dependence[] dependsOn)
+        public static bool SkipAsset(Dependence[] dependsOn)
         {
             if (dependsOn == null) return false;
 
@@ -105,7 +105,7 @@ namespace CompatibilityLib
             foreach (var dependence in dependsOn)
             {
                 bool loaded = Core.LoadedModIds.Contains(dependence.modid);
-                flag = flag && (loaded & !dependence.invert);
+                flag = flag && (loaded ^ dependence.invert);
             }
 
             return !flag;

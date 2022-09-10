@@ -1,6 +1,10 @@
 # CompatibilityLib
 
-Topic on forum: https://www.vintagestory.at/forums/topic/2863-combatibility-lib
+### ****Embedded in vanilla since 1.15.0, do not use the library as mod in later versions, the game will crash.****
+
+Wiki page (actually info): https://wiki.vintagestory.at/index.php?title=Modding:CompatibilityLib <br>
+Topic on forum: https://www.vintagestory.at/forums/topic/2863-combatibility-lib <br>
+Moddb page: https://mods.vintagestory.at/show/mod/110
 
 A simple library for Vintage Story that makes it easy to add compatibility with other mods for assets. 
 
